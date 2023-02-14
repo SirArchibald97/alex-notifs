@@ -7,9 +7,9 @@ module.exports = async (client, newGuild) => {
             new EmbedBuilder()
             .setTitle("I joined a new guild!")
                 .setDescription(
-                    `**Name:** ${newGuild.name} (\`ID: ${newGuild.id}\`)` + 
+                    `**Name:** ${newGuild.name} (\`${newGuild.id}\`)` + 
                     `\n**Owner:** ${guildOwner.user.tag} (\`${newGuild.ownerId}\`)` + 
-                    `\n**Members:** ${newGuild.memberCount.toLocaleString("en-US")}")}`
+                    `\n**Members:** ${newGuild.memberCount.toLocaleString("en-US")}`
                 )
                 .setTimestamp()
                 .setColor("Green")
