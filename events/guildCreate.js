@@ -9,10 +9,11 @@ module.exports = async (client, newGuild) => {
                 .setDescription(
                     `**Name:** ${newGuild.name} (\`${newGuild.id}\`)` + 
                     `\n**Owner:** ${guildOwner.user.tag} (\`${newGuild.ownerId}\`)` + 
-                    `\n**Members:** ${newGuild.memberCount.toLocaleString("en-US")}`
+                    `\n**Members:** ${newGuild.memberCount.toLocaleString("en-US")}` +
+                    `\n\n**Total guilds: ${client.guilds.cache.size.toLocaleString("en-US")}**`
                 )
                 .setTimestamp()
                 .setColor("Green")
             ]
-    })
+    });
 }

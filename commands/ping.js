@@ -5,5 +5,6 @@ module.exports = {
     
     async execute(client, interaction) {
         await interaction.reply("Pong!");
+        await client.webhook.send({ content: "Pong but its a webhook!" });
     }
 }
